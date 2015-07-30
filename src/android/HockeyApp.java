@@ -40,8 +40,8 @@ public class HockeyApp extends CordovaPlugin {
                 cordova.getActivity().runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        PrefsUtil.getInstance().saveFeedbackTokenToPrefs(context, null);
-                        PrefsUtil.getInstance().saveNameEmailSubjectToPrefs(null, null, null, null);
+                        PrefsUtil.getInstance().saveFeedbackTokenToPrefs(cordova.getActivity(), null);
+                        PrefsUtil.getInstance().saveNameEmailSubjectToPrefs(cordova.getActivity(), null, null, null);
                         FeedbackManager.showFeedbackActivity(cordova.getActivity());
                     }
                 });
