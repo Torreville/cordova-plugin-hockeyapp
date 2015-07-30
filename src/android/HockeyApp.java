@@ -7,6 +7,7 @@ import org.json.JSONArray;
 import net.hockeyapp.android.FeedbackManager;
 import net.hockeyapp.android.UpdateManager;
 import net.hockeyapp.android.CrashManager;
+import net.hockeyapp.android.utils.PrefsUtil;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
