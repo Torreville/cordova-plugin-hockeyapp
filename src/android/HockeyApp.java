@@ -37,11 +37,13 @@ public class HockeyApp extends CordovaPlugin {
         }
         else if(action.equals("feedback")) {
             if(initialized) {
+                final String name = args.optString(0);
+                final String email = args.optString(1);
                 cordova.getActivity().runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
                         PrefsUtil.getInstance().saveFeedbackTokenToPrefs(cordova.getActivity(), null);
-                        PrefsUtil.getInstance().saveNameEmailSubjectToPrefs(cordova.getActivity(), null, null, null);
+                        PrefsUtil.getInstance().saveNameEmailSubjectToPrefs(cordova.getActivity(), name, email, "");
                         FeedbackManager.showFeedbackActivity(cordova.getActivity());
                     }
                 });

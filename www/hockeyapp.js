@@ -4,8 +4,8 @@ var hockeyapp = {
     start: function(success, failure, token) {
         exec(success, failure, "HockeyApp", "start", [ token ]);
     },
-    feedback: function(success, failure) {
-        exec(success, failure, "HockeyApp", "feedback", []);
+    feedback: function(name, email, success, failure) {
+        exec(success, failure, "HockeyApp", "feedback", [ name, email ]);
     },
     forceCrash: function(success, failure) {
         exec(success, failure, "HockeyApp", "forceCrash", []);
